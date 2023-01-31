@@ -1,0 +1,23 @@
+.custom-text {
+  color: rgb(230, 217, 39);
+  text-shadow: -3px -3px 0 rgb(29, 21, 150), 3px -3px 0 rgb(29, 21, 150),
+    -3px 3px 0 rgb(29, 21, 150), 3px 3px 0 rgb(29, 21, 150);
+  white-space: nowrap;
+}
+
+.header {
+  display: flex;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  margin-left: auto;
+}

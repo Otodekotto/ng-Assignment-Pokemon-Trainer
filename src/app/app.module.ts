@@ -6,13 +6,17 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { LoginPage } from './pages/login/login.page';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { HeaderComponent } from './component/header/header.component';
+import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogue.page';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ //components
     AppComponent,
     LoginPage,
-    LoginFormComponent
+    LoginFormComponent,
+    HeaderComponent,
+     PokemonCataloguePage
   ],
   imports: [ //Module
     BrowserModule,
@@ -21,6 +25,6 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
