@@ -1,8 +1,7 @@
-
+import { LoginPage } from "./pages/login/login.page";
 import {NgModule} from "@angular/core"
 import { RouterModule , Routes } from "@angular/router";
-import { LoginPage } from "./pages/login/login.page";
-import { HeaderComponent } from './component/header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogue.page';
 
 const routes: Routes = [

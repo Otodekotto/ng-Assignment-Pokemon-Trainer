@@ -19,7 +19,6 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
-.env
 
 # Visual Studio Code
 .vscode/*
@@ -44,3 +43,8 @@ Thumbs.db
 
 /src/environments
 .env
+
+src/environments/*
+src/environments/environment.ts
+src/environments/environment.prod.ts
+

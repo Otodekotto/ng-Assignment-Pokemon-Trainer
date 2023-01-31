@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { LoginPage } from './pages/login/login.page';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-import { HeaderComponent } from './component/header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogue.page';
 import { FormsModule } from '@angular/forms';
 
