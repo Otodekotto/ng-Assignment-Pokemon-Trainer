@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { LoginPage } from './pages/login/login.page';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ //components
@@ -16,6 +17,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
   imports: [ //Module
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule,
   ],
   providers: [],
