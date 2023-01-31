@@ -44,7 +44,7 @@ export class LoginService {
 
     const headers = new HttpHeaders({
       "Content-type": "application/json",
-      "x-api-key": "apiKey"
+      "x-api-key": apiKey
     });
 
     return this.http.post<User>(apiUserURL, user,{
