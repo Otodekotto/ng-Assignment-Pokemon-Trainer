@@ -13,6 +13,6 @@ export class LoginPage {
   }
 
   handleLogin(): void{
-    //this.router.navigateByUrl("/catalouge")
+    this.router.navigateByUrl("/pokemon-catalogue")
   }
 }
