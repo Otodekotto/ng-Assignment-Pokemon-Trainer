@@ -1,10 +1,11 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable, of, switchMap } from 'rxjs';
+import { map, Observable, of, switchMap} from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from '../models/user.model';
 
-const { apiURL , apiKey} = environment;
+
+const { apiUserURL , apiKey} = environment;
 
 @Injectable({
   providedIn: 'root'
@@ -22,12 +23,12 @@ export class LoginService {
             return this.createUser(username);
           }
           return of(user)
-        })
+        }),
       )
   }
-  //check user exist
+  //check if user exist
   private checkUsername(username: string): Observable<User | undefined>{
-    return this.http.get<User[]>(`${apiUsers}?username=${username}`)
+    return this.http.get<User[]>(`${apiUserURL}?username=${username}`)
     .pipe(
       //RxJs Operators
       map((response:User[]) => response.pop())
@@ -46,7 +47,7 @@ export class LoginService {
       "x-api-key": "apiKey"
     });
 
-    return this.http.post<User>(apiUsers, user,{
+    return this.http.post<User>(apiUserURL, user,{
       headers
     })
 
