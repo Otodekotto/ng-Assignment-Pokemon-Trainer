@@ -9,6 +9,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { HeaderComponent } from './components/header/header.component';
 import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogue.page';
 import { FormsModule } from '@angular/forms';
+import { ProfilePage } from './pages/profile/profile.page';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     LoginPage,
     LoginFormComponent,
     HeaderComponent,
-    PokemonCataloguePage,
+     PokemonCataloguePage,
+     ProfilePage
   ],
   imports: [
     //Module
