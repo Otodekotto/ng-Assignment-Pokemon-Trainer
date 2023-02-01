@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogue.page';
 import { FormsModule } from '@angular/forms';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
     HeaderComponent,
     PokemonCataloguePage,
     PokemonListComponent,
+    PokemonListItemComponent,
   ],
   imports: [
     //Module

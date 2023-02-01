@@ -1,5 +1,4 @@
-<ul>
-    <li *ngFor="let pokemon of pokemons">
-        <span><img class="inline-block" [src]="pokemon.sprite"/>{{pokemon.name}}</span>
-    </li>
-</ul>
+<div class="h-60 grid grid-cols-3 gap-4 content-start">
+  <app-pokemon-list-item *ngFor="let pokemon of pokemons" [pokemon]="pokemon">
+  </app-pokemon-list-item>
+</div>

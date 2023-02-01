@@ -1,0 +1,7 @@
+.card {
+  min-width: 350px !important;
+}
+.poke-img {
+  min-width: 100px !important;
+  min-height: 100px !important;
+}
