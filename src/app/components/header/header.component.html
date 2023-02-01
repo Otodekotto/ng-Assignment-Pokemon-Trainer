@@ -1,5 +1,5 @@
 <header
-  class="header h-20 p-3 bg-gradient-to-r from-red-800 via-gray-400 to-blue-900 z-50 fixed w-full"
+  class="header h-20 p-3 bg-gradient-to-r from-red-800 via-gray-400 to-blue-900 z-50 sticky top-0 w-full"
 >
   <img
     class="logo-img"
@@ -12,13 +12,15 @@
     class="inline-block font-bold text-5xl px-10 custom-text"
     >Pokémon Trainer App</a
   >
-  <a class="span-text font-bold text-3xl px-10" routerLink="/profile "
-    >username</a
-  >
-  <img
-    class="profile-img"
-    routerLink="/profile"
-    src="/assets/img/profile icon.png"
-    alt="profile-logo"
-  />
+  <ng-container *ngIf="user !== undefined">
+    <a class="span-text font-bold text-3xl px-10" routerLink="/profile ">{{
+      user.username
+    }}</a>
+    <img
+      class="profile-img"
+      routerLink="/profile"
+      src="/assets/img/profile icon.png"
+      alt="profile-logo"
+    />
+  </ng-container>
 </header>
