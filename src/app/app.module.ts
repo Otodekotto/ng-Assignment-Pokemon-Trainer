@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoginPage } from './pages/login/login.page';
@@ -11,14 +11,16 @@ import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogu
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [ //components
+  declarations: [
+    //components
     AppComponent,
     LoginPage,
     LoginFormComponent,
     HeaderComponent,
-     PokemonCataloguePage
+    PokemonCataloguePage,
   ],
-  imports: [ //Module
+  imports: [
+    //Module
     BrowserModule,
     HttpClientModule,
     FormsModule,
