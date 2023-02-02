@@ -1,12 +1,23 @@
 <aside class="absolute bottom-8 left-7 z-10">
-    <span *ngIf="isCaught; then caught; else notCaught"></span>
-    <ng-template #caught class=><button
-    (click)="onButtonClick()"
-    class="text-m font-bold mt-6 px-4 py-2 bg-red-900 text-white rounded-lg tracking-wider hover:bg-red-400  outline-rose-400 outline-none outline-offset-0 btn"
-  >release</button>
+  <span *ngIf="isCaught; then caught; else notCaught"></span>
+  <ng-template #caught>
+    <span *ngIf="onCatalogue; then logo; else button"></span>
+    <ng-template #logo></ng-template>
+    <ng-template #button>
+      <button
+        (click)="onButtonClick()"
+        class="text-m font-bold mt-6 px-4 py-2 bg-red-900 text-white rounded-lg tracking-wider hover:bg-red-400 outline-rose-400 outline-none outline-offset-0 btn"
+      >
+        release
+      </button>
+    </ng-template>
   </ng-template>
-    <ng-template #notCaught class="bg-green-400"><button
-    (click)="onButtonClick()"
-    class="text-m font-bold mt-6 px-4 py-2 bg-green-700 text-white rounded-lg tracking-wider hover:bg-green-500 outline-lime-400 300 outline-none outline-offset-0 btn"
-  >catch</button></ng-template>
+  <ng-template #notCaught
+    ><button
+      (click)="onButtonClick()"
+      class="text-m font-bold mt-6 px-4 py-2 bg-green-700 text-white rounded-lg tracking-wider hover:bg-green-500 outline-lime-400 300 outline-none outline-offset-0 btn"
+    >
+      catch
+    </button></ng-template
+  >
 </aside>

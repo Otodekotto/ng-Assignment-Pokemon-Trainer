@@ -27,6 +27,7 @@ import { ProfilePage } from './pages/profile/profile.page';
     PokemonListComponent,
     PokemonListItemComponent,
     InfoCardButtonComponent,
+    ProfilePage,
   ],
   imports: [
     //Module

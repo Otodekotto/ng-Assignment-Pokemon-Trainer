@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon.model';
 import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-pokemon-catalogue',
@@ -8,6 +9,7 @@ import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.serv
   styleUrls: ['./pokemon-catalogue.page.css'],
 })
 export class PokemonCataloguePage implements OnInit {
+  public onCatalogue: boolean = true;
   get pokemons(): Pokemon[] {
     return this.pokemonCatalogueService.pokemons;
   }
@@ -17,7 +19,8 @@ export class PokemonCataloguePage implements OnInit {
   }
 
   constructor(
-    private readonly pokemonCatalogueService: PokemonCatalogueService
+    private readonly pokemonCatalogueService: PokemonCatalogueService,
+    private userService: UserService
   ) {}
 
   ngOnInit(): void {

@@ -13,10 +13,11 @@ export class InfoCardButtonComponent implements OnInit {
   private loading: boolean = false;
 
   public isCaught: boolean = false;
+  public onCatalogue: boolean = false;
   @Input() pokemonName: string = '';
 
   constructor(
-    private userService: UserService,
+    private readonly userService: UserService,
     private readonly trainerService: TrainerService
   ) {}
 

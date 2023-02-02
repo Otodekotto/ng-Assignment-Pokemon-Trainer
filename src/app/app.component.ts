@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonCatalogueService } from './services/pokemon-catalogue.service';
 import { UserService } from './services/user.service';
 
 @Component({
@@ -9,12 +10,12 @@ import { UserService } from './services/user.service';
 export class AppComponent implements OnInit {
   title = 'ng-Assignment-Pokemon-Trainer';
   constructor(
-    private readonly userService: UserService
-  ) //private readonly pokemonService: PokemonCatalogueService
-  {}
+    private readonly userService: UserService,
+    private readonly pokemonService: PokemonCatalogueService
+  ) {}
   ngOnInit(): void {
     if (this.userService.user) {
-      //this.pokemonService.findAllPokemons();
+      this.pokemonService.findAllPokemon();
     }
   }
 }
