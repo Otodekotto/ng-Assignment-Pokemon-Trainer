@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.page.css'],
 })
 export class LoginPage {
-  constructor(private readonly router: Router) {}
+  get loading(): boolean {
+    return this.loginService.loading;
+  }
+
+  constructor(
+    private readonly router: Router,
+    private readonly loginService: LoginService
+  ) {}
 
   handleLogin(): void {
     this.router.navigateByUrl('/pokemon-catalogue');

@@ -9,5 +9,8 @@
             placeholder="Trainer Name">
     </fieldset>
 
-    <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-full">Login</button>
+    <button type="submit" *ngIf="!loading"class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-full">Login</button>
+    <button type="submit" *ngIf="loading"class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-full" disabled>Logging in</button>
+    
+
 </form>
