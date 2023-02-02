@@ -69,4 +69,8 @@ export class PokemonCatalogueService {
       console.log('LocalStorage');
     }
   }
+
+  public pokemonById(name: string): Pokemon | undefined {
+    return this._pokemon.find((pokemon: Pokemon) => pokemon.name === name);
+  }
 }
