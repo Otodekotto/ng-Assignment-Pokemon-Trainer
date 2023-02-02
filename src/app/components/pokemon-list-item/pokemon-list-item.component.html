@@ -1,0 +1,34 @@
+<div *ngIf="pokemon" class="relative">
+  <div class="p-3 sm:w-1/2 lg:w-1/3 w-full hover:scale-105 duration-500">
+    <app-info-card-button
+      [pokemonName]="pokemon.name"
+      class=""
+    ></app-info-card-button>
+    <div
+      class="flex items-center justify-between p-4 pb-15 rounded-lg bg-gradient-to-r from-red-800 to-blue-900 shadow-indigo-50 shadow-md card"
+    >
+      <div>
+        <h2 class="text-white text-2xl font-bold name-text">
+          {{ pokemon.name }}
+        </h2>
+        <h3 class="mt-2 text-xl font-bold text-orange-500 text-left">null</h3>
+        <p class="text-sm font-semibold text-gray-400 mb-9">type</p>
+      </div>
+      <div
+        class="bg-gradient-to-r from-gray-400 to-orange-100 w-40 h-40 rounded-full shadow-2xl shadow-white border-white border-spacing-0 border-2 flex justify-center items-center mr-10"
+      >
+        <div>
+          <img
+            class="poke-img"
+            [src]="pokemon.sprite"
+            (error)="
+              pokemon.sprite =
+                'https://pkmncards.com/wp-content/uploads/unown-question-mark-legends-awakened-la-82.jpg'
+            "
+            [alt]="pokemon.sprite"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

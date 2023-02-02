@@ -10,6 +10,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogue.page';
 import { FormsModule } from '@angular/forms';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
+import { InfoCardButtonComponent } from './components/info-card-button/info-card-button.component';
 import { AuthLoggedinGuard } from './guards/auth-loggedin.guard';
 import { AuthGuard } from './guards/auth.guard';
 
@@ -22,6 +24,8 @@ import { AuthGuard } from './guards/auth.guard';
     HeaderComponent,
     PokemonCataloguePage,
     PokemonListComponent,
+    PokemonListItemComponent,
+    InfoCardButtonComponent,
   ],
   imports: [
     //Module

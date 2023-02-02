@@ -1,0 +1,13 @@
+.card {
+  min-width: 450px !important;
+  min-height: 230px !important;
+}
+.poke-img {
+  min-width: 200px !important;
+  min-height: 200px !important;
+  max-width: 200px !important;
+  max-height: 200px !important;
+}
+.name-text {
+  max-width: 200px;
+}

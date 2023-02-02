@@ -44,7 +44,7 @@ export class PokemonCatalogueService {
             pokemons.results.map((pokemon: any) => {
               let id = pokemon.url.split('/');
               pokemon.sprite =
-                'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/' +
+                'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' +
                 id[6] +
                 '.png';
             });
@@ -68,5 +68,9 @@ export class PokemonCatalogueService {
       this._pokemon = storagePokemonData;
       console.log('LocalStorage');
     }
+  }
+
+  public pokemonById(name: string): Pokemon | undefined {
+    return this._pokemon.find((pokemon: Pokemon) => pokemon.name === name);
   }
 }
