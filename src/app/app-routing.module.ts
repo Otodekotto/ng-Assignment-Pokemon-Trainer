@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogue.page';
 import { AuthGuard } from './guards/auth.guard';
+import { AuthLoggedinGuard } from './guards/auth-loggedin.guard';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginPage,
+    canActivate: [AuthLoggedinGuard],
   },
   {
     path: 'pokemon-catalogue',

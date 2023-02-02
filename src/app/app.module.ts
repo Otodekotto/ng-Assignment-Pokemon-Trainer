@@ -9,6 +9,11 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { HeaderComponent } from './components/header/header.component';
 import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogue.page';
 import { FormsModule } from '@angular/forms';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
+import { InfoCardButtonComponent } from './components/info-card-button/info-card-button.component';
+import { AuthLoggedinGuard } from './guards/auth-loggedin.guard';
+import { AuthGuard } from './guards/auth.guard';
 import { ProfilePage } from './pages/profile/profile.page';
 
 @NgModule({
@@ -18,8 +23,10 @@ import { ProfilePage } from './pages/profile/profile.page';
     LoginPage,
     LoginFormComponent,
     HeaderComponent,
-     PokemonCataloguePage,
-     ProfilePage
+    PokemonCataloguePage,
+    PokemonListComponent,
+    PokemonListItemComponent,
+    InfoCardButtonComponent,
   ],
   imports: [
     //Module
@@ -28,7 +35,7 @@ import { ProfilePage } from './pages/profile/profile.page';
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [AuthGuard, AuthLoggedinGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
