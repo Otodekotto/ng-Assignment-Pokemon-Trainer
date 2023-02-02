@@ -13,6 +13,10 @@ import { UserService } from 'src/app/services/user.service';
 export class LoginFormComponent {
   @Output() login: EventEmitter<void> = new EventEmitter();
 
+  get loading(): boolean {
+    return this.loginService.loading;
+  }
+
   constructor(
     private readonly loginService: LoginService,
     private readonly userService: UserService
