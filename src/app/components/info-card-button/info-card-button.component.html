@@ -1,8 +1,12 @@
 <aside class="absolute bottom-8 left-7 z-10">
-  <button
+    <span *ngIf="isCaught; then caught; else notCaught"></span>
+    <ng-template #caught class=><button
     (click)="onButtonClick()"
-    class="text-m font-bold mt-6 px-4 py-2 bg-green-400 text-white rounded-lg tracking-wider hover:bg-orange-500 outline-none btn"
-  >
-    catch
-  </button>
+    class="text-m font-bold mt-6 px-4 py-2 bg-red-700 text-white rounded-lg tracking-wider hover:bg-orange-500 outline-none btn"
+  >release</button>
+  </ng-template>
+    <ng-template #notCaught class="bg-green-400"><button
+    (click)="onButtonClick()"
+    class="text-m font-bold mt-6 px-4 py-2 bg-green-700 text-white rounded-lg tracking-wider hover:bg-orange-500 outline-none btn"
+  >catch</button></ng-template>
 </aside>
