@@ -10,13 +10,10 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./info-card-button.component.css'],
 })
 export class InfoCardButtonComponent implements OnInit {
+  private loading: boolean = false;
+
   public isCaught: boolean = false;
-
   @Input() pokemonName: string = '';
-
-  get loading(): boolean {
-    return this.trainerService.loading;
-  }
 
   constructor(
     private userService: UserService,
@@ -24,14 +21,16 @@ export class InfoCardButtonComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.isCaught = this.userService.inPokemons(this.pokemonName);
+    this.isCaught = this.userService.inCaughtPokemons(this.pokemonName);
   }
 
   onButtonClick(): void {
+    this.loading = true;
     //Add the pokemon to trainer
-    this.trainerService.addToTrainer(this.pokemonName).subscribe({
+    this.trainerService.addToUpdatedCaught(this.pokemonName).subscribe({
       next: (user: User) => {
-        this.isCaught = this.userService.inPokemons(this.pokemonName);
+        this.loading = false;
+        this.isCaught = this.userService.inCaughtPokemons(this.pokemonName);
       },
       error: (error: HttpErrorResponse) => {
         console.log('Error', error);

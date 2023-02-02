@@ -22,7 +22,8 @@ export class UserService {
   constructor() {
     this._user = StorageUtil.storageRead<User>(StorageKeys.User);
   }
-  public inPokemons(pokemonName: string): boolean {
+
+  public inCaughtPokemons(pokemonName: string): boolean {
     if (this._user) {
       return Boolean(
         this.user?.pokemon.find(
@@ -31,5 +32,17 @@ export class UserService {
       );
     }
     return false;
+  }
+  public removeFromCaught(pokemonName: string): void {
+    if (this._user) {
+      this._user.pokemon = this._user.pokemon.filter(
+        (pokemon: Pokemon) => pokemon.name !== pokemonName
+      );
+    }
+  }
+  public addToCaught(pokemon: Pokemon): void {
+    if (this._user) {
+      this._user.pokemon.push(pokemon);
+    }
   }
 }

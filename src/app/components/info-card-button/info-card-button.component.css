@@ -2,3 +2,6 @@
   min-width: 100px;
   min-height: 50px;
 }
+.bg-dark-red {
+  background-color: rgb(97, 44, 15);
+}

@@ -27,7 +27,7 @@ export class TrainerService {
   //get pokemon based on id
 
   //patch request with the userId and the pokemon
-  public addToTrainer(pokemonName: string): Observable<User> {
+  public addToUpdatedCaught(pokemonName: string): Observable<User> {
     if (!this.userService.user) {
       throw new Error('add to fav: no user');
     }
@@ -39,8 +39,10 @@ export class TrainerService {
       throw new Error('no pokemon with name: ' + pokemonName);
     }
 
-    if (this.userService.inPokemons(pokemonName)) {
-      throw new Error('addPokemon: pokemon already caught');
+    if (this.userService.inCaughtPokemons(pokemonName)) {
+      this.userService.removeFromCaught(pokemonName);
+    } else {
+      this.userService.addToCaught(pokemon);
     }
 
     const headers = new HttpHeaders({
@@ -54,7 +56,7 @@ export class TrainerService {
       .patch<User>(
         `${apiUserURL}/${user.id}`,
         {
-          pokemon: [...user.pokemon, pokemon],
+          pokemon: [...user.pokemon],
         },
         {
           headers,
