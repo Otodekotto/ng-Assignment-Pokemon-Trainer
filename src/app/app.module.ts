@@ -14,6 +14,7 @@ import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon
 import { InfoCardButtonComponent } from './components/info-card-button/info-card-button.component';
 import { AuthLoggedinGuard } from './guards/auth-loggedin.guard';
 import { AuthGuard } from './guards/auth.guard';
+import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AuthGuard } from './guards/auth.guard';
     PokemonListComponent,
     PokemonListItemComponent,
     InfoCardButtonComponent,
+    LoadingScreenComponent,
   ],
   imports: [
     //Module
