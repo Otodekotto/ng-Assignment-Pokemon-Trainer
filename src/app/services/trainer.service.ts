@@ -13,12 +13,6 @@ const { apiKey, apiUserURL } = environment;
   providedIn: 'root',
 })
 export class TrainerService {
-  private _loading: boolean = false;
-
-  get loading(): boolean {
-    return this._loading;
-  }
-
   constructor(
     private http: HttpClient,
     private readonly pokemonService: PokemonCatalogueService,
@@ -50,8 +44,6 @@ export class TrainerService {
       'x-api-key': apiKey,
     });
 
-    this._loading = true;
-
     return this.http
       .patch<User>(
         `${apiUserURL}/${user.id}`,
@@ -65,9 +57,6 @@ export class TrainerService {
       .pipe(
         tap((updatedUser: User) => {
           this.userService.user = updatedUser;
-        }),
-        finalize(() => {
-          this._loading = false;
         })
       );
   }

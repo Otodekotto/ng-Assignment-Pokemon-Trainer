@@ -2,7 +2,13 @@
   <span *ngIf="isCaught; then caught; else notCaught"></span>
   <ng-template #caught>
     <span *ngIf="onCatalogue; then logo; else button"></span>
-    <ng-template #logo></ng-template>
+    <ng-template #logo>
+      <img
+        class="logo-img"
+        src="/assets/img/pokemon logo.png"
+        alt="image-logo"
+      />
+    </ng-template>
     <ng-template #button>
       <button
         (click)="onButtonClick()"
