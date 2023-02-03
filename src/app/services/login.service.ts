@@ -19,6 +19,7 @@ export class LoginService {
   //Dependency Injection.
   constructor(private readonly http: HttpClient) {}
 
+  //Login, exist log in else create user
   public login(username: string): Observable<User> {
     this._loading = true;
     return this.checkUsername(username).pipe(
@@ -33,6 +34,7 @@ export class LoginService {
       })
     );
   }
+
   //check if user exist
   private checkUsername(username: string): Observable<User | undefined> {
     return this.http.get<User[]>(`${apiUserURL}?username=${username}`).pipe(
