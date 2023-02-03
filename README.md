@@ -3,6 +3,7 @@
 This project is for the third assignment at Experis Academy. It's a Pokemon Trainer Application on the webrowser, using Angular.
 
 It contains a Login page, a Pokemon-Catalogue page and a profile page. The user must first Create a account by input a Name. Once a Account is created the user will be directed to pokemon catalogue where the user can catch pokemon by clicking the catch button. In profile page the user can see what pokemon have been catched and release them by clicking release.
+You enter profile page by clicking on your trainer name, and enter Pokemon Catalogue by clicking Pokemon Trainer App
 
 ## deployment
 The project is deployed on the following url: [Pokemon Trainer](URL Doesnt Exist)
