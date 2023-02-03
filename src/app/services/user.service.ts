@@ -23,6 +23,7 @@ export class UserService {
     this._user = StorageUtil.storageRead<User>(StorageKeys.User);
   }
 
+  //check what pokemon is caught
   public inCaughtPokemons(pokemonName: string): boolean {
     if (this._user) {
       return Boolean(
@@ -33,6 +34,7 @@ export class UserService {
     }
     return false;
   }
+  //remove pokemon from caught
   public removeFromCaught(pokemonName: string): void {
     if (this._user) {
       this._user.pokemon = this._user.pokemon.filter(
@@ -40,6 +42,7 @@ export class UserService {
       );
     }
   }
+  //add to caught
   public addToCaught(pokemon: Pokemon): void {
     if (this._user) {
       this._user.pokemon.push(pokemon);

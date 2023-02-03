@@ -28,12 +28,11 @@ export class LoginFormComponent {
 
     this.loginService.login(username).subscribe({
       next: (user: User) => {
-        console.log(user);
         this.userService.user = user;
         this.login.emit();
       },
       error: () => {
-        //handle that locally.
+        alert('Login Failed');
       },
     });
   }

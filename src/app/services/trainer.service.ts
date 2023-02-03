@@ -18,7 +18,7 @@ export class TrainerService {
     private readonly pokemonService: PokemonCatalogueService,
     private readonly userService: UserService
   ) {}
-  //get pokemon based on id
+  //get pokemon based on Name
 
   //patch request with the userId and the pokemon
   public addToUpdatedCaught(pokemonName: string): Observable<User> {
@@ -27,7 +27,7 @@ export class TrainerService {
     }
     const user: User = this.userService.user;
     const pokemon: Pokemon | undefined =
-      this.pokemonService.pokemonById(pokemonName);
+      this.pokemonService.pokemonByName(pokemonName);
 
     if (!pokemon) {
       throw new Error('no pokemon with name: ' + pokemonName);
