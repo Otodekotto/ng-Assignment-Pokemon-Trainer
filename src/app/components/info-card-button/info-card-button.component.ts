@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user.model';
+import { CurrentPageService } from 'src/app/services/current-page.service';
 import { TrainerService } from 'src/app/services/trainer.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -13,12 +14,18 @@ export class InfoCardButtonComponent implements OnInit {
   private loading: boolean = false;
 
   public isCaught: boolean = false;
+  public onCatalogue: boolean = false;
   @Input() pokemonName: string = '';
 
   constructor(
-    private userService: UserService,
-    private readonly trainerService: TrainerService
-  ) {}
+    private readonly userService: UserService,
+    private readonly trainerService: TrainerService,
+    private readonly currentPageService: CurrentPageService
+  ) {
+    this.currentPageService.catalogue$.subscribe((catalogue) => {
+      this.onCatalogue = catalogue;
+    });
+  }
 
   ngOnInit(): void {
     this.isCaught = this.userService.inCaughtPokemons(this.pokemonName);

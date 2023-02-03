@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogue.page';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthLoggedinGuard } from './guards/auth-loggedin.guard';
+import { ProfilePage } from './pages/profile/profile.page';
 
 const routes: Routes = [
   {
@@ -24,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    component: PokemonCataloguePage,
+    component: ProfilePage,
     canActivate: [AuthGuard],
   },
 ];

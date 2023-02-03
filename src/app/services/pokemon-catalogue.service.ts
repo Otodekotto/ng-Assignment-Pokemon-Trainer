@@ -28,6 +28,10 @@ export class PokemonCatalogueService {
   constructor(private readonly http: HttpClient) {}
 
   public findAllPokemon(): void {
+    if (this._pokemon.length > 0 || this.loading) {
+      return;
+    }
+
     this._loading = true;
     if (StorageUtil.storageRead(StorageKeys.PokemonCatalogue) === undefined) {
       this.http
