@@ -6,7 +6,7 @@ import { StorageKeys } from '../enums/storage-keys.enum';
 import { Pokemon } from '../models/pokemon.model';
 import { StorageUtil } from '../utils/storage.util';
 
-const { apiAllpokemonURL, apiPokemonSprite } = environment;
+const { apiAllPokemonURL, apiPokemonSprite } = environment;
 
 @Injectable({
   providedIn: 'root',
@@ -39,7 +39,7 @@ export class PokemonCatalogueService {
     this._loading = true;
     if (StorageUtil.storageRead(StorageKeys.PokemonCatalogue) === undefined) {
       this.http
-        .get<Pokemon[]>(apiAllpokemonURL)
+        .get<Pokemon[]>(apiAllPokemonURL)
         .pipe(
           finalize(() => {
             this._loading = false;
