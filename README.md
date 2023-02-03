@@ -1,27 +1,20 @@
-# NgAssignmentPokemonTrainer
+## Pokemon-Trainer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+This project is for the third assignment at Experis Academy. It's a Pokemon Trainer Application on the webrowser, using Angular.
 
-## Development server
+It contains a Login page, a Pokemon-Catalogue page and a profile page. The user must first Create a account by input a Name. Once a Account is created the user will be directed to pokemon catalogue where the user can catch pokemon by clicking the catch button. In profile page the user can see what pokemon have been catched and release them by clicking release.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## deployment
+The project is deployed on the following url: [Pokemon Trainer](URL Doesnt Exist)
 
-## Code scaffolding
+### Running the application
+To run the application as a localhost you only need to have nodejs installed. [Download nodejs.](https://nodejs.org/en/)
+Once node is installed, you can download this git repository and navigate to the project folder using a commandline (such as cmd, powershell, or bash)
+then run "ng serve"
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Technology used
+The application, is also already deployed on the webb on the follow [url.](URL doesnt exist/)
+This application was deployed using [Vercel](https://vercel.com) as well as used [Glitch](https://glitch.com/) for the api database. 
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Open-sourch used
+We also used the code on a [Github](https://github.com/dewald-els/noroff-assignment-api) repository of dewalds-els to use as a base for the database. 
