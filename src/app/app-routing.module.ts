@@ -28,6 +28,11 @@ const routes: Routes = [
     component: ProfilePage,
     canActivate: [AuthGuard],
   },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: '/login',
+  },
 ];
 
 @NgModule({
