@@ -25,13 +25,15 @@ export class ProfilePage {
     private userService: UserService,
     private currentPageService: CurrentPageService,
     private readonly router: Router
-  ) {}
+  ) {
+    this.currentPageService.updateCurrentPage(false);
+  }
 
   logOut(): void {
     if (this.userService.user !== undefined) {
       this.userService.user = undefined;
       sessionStorage.removeItem('trainer-user');
-      this.currentPageService.updateCurrentPage(true);
+      //this.currentPageService.updateCurrentPage(true);
       this.router.navigateByUrl('/');
     }
   }

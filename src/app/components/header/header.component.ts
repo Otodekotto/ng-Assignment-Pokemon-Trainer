@@ -13,15 +13,5 @@ export class HeaderComponent {
     return this.userService.user;
   }
 
-  constructor(
-    private readonly userService: UserService,
-    private currentPageService: CurrentPageService
-  ) {}
-
-  onProfileClick() {
-    this.currentPageService.updateCurrentPage(false);
-  }
-  onCatalogueClick() {
-    this.currentPageService.updateCurrentPage(true);
-  }
+  constructor(private readonly userService: UserService) {}
 }
