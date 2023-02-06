@@ -22,6 +22,7 @@ export class InfoCardButtonComponent implements OnInit {
     private readonly trainerService: TrainerService,
     private readonly currentPageService: CurrentPageService
   ) {
+    //update a local variable in order to choose the correct button to show
     this.currentPageService.catalogue$.subscribe((catalogue) => {
       this.onCatalogue = catalogue;
     });

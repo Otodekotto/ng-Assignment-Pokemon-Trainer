@@ -1,1 +1,12 @@
-<app-pokemon-list [pokemons]="caughtPokemons"></app-pokemon-list>
+<ng-container *ngIf="user !== undefined">
+  <a class="font-bold text-3xl px-5 custom-text">
+    Pokémon Trainer: {{user.username}}
+  </a>
+  <button
+    class="text-m font-bold mt-6 px-4 py-2 bg-red-900 text-white rounded-lg tracking-wider hover:bg-red-400 outline-rose-400 outline-none outline-offset-0 btn"
+    (click)="logOut()"
+  >
+    Log out
+  </button>
+  <app-pokemon-list [pokemons]="caughtPokemons"></app-pokemon-list>
+</ng-container>
