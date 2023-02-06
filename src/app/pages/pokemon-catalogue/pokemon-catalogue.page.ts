@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon.model';
 import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.service';
-import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-pokemon-catalogue',
@@ -19,8 +18,7 @@ export class PokemonCataloguePage implements OnInit {
   }
 
   constructor(
-    private readonly pokemonCatalogueService: PokemonCatalogueService,
-    private userService: UserService
+    private readonly pokemonCatalogueService: PokemonCatalogueService
   ) {}
 
   ngOnInit(): void {

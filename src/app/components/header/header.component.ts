@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 import { CurrentPageService } from 'src/app/services/current-page.service';
 import { UserService } from 'src/app/services/user.service';
-import { InfoCardButtonComponent } from '../info-card-button/info-card-button.component';
 
 @Component({
   selector: 'app-header',
