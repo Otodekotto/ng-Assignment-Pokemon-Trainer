@@ -27,17 +27,23 @@ export class LoginFormComponent {
   public loginSubmit(loginForm: NgForm): void {
     //username!
     const { username } = loginForm.value;
+
     var pattern = new RegExp('^[a-zA-Z0-9]*$');
-    if (pattern.test(username)) {
-      this.loginService.login(username).subscribe({
-        next: (user: User) => {
-          this.userService.user = user;
-          this.login.emit();
-        },
-        error: () => {
-          alert('Login Failed');
-        },
-      });
+    if (username !== '') {
+      if (pattern.test(username)) {
+        this.loginService.login(username).subscribe({
+          next: (user: User) => {
+            this.userService.user = user;
+            this.login.emit();
+          },
+          error: () => {
+            alert('Login Failed');
+          },
+        });
+      } else {
+        this.isError = true;
+      }
+      //if no username is given
     } else {
       this.isError = true;
     }
