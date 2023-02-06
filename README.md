@@ -15,7 +15,7 @@ The project is deployed on the following url: [Pokemon Trainer](https://ng-assig
 ### Running the application
 To run the application as a localhost you only need to have nodejs installed. [Download nodejs.](https://nodejs.org/en/)
 Once node is installed, you can download this git repository and navigate to the project folder using a commandline (such as cmd, powershell, or bash)
-then run "ng serve"
+then run "npm run build" followed up by "ng serve"
 
 ### Technology used
 The application, is also already deployed on the webb on the follow [url.](https://ng-assignment-pokemon-trainer-2r5e4r2ch-otodekotto.vercel.app/login)
