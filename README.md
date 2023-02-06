@@ -6,7 +6,7 @@ It contains a Login page, a Pokemon-Catalogue page and a profile page. The user 
 You enter profile page by clicking on your trainer name, and enter Pokemon Catalogue by clicking Pokemon Trainer App
 
 ## deployment
-The project is deployed on the following url: [Pokemon Trainer](URL Doesnt Exist)
+The project is deployed on the following url: [Pokemon Trainer](https://ng-assignment-pokemon-trainer-2r5e4r2ch-otodekotto.vercel.app/login)
 
 ### Running the application
 To run the application as a localhost you only need to have nodejs installed. [Download nodejs.](https://nodejs.org/en/)
@@ -14,7 +14,7 @@ Once node is installed, you can download this git repository and navigate to the
 then run "ng serve"
 
 ### Technology used
-The application, is also already deployed on the webb on the follow [url.](URL doesnt exist/)
+The application, is also already deployed on the webb on the follow [url.](https://ng-assignment-pokemon-trainer-2r5e4r2ch-otodekotto.vercel.app/login)
 This application was deployed using [Vercel](https://vercel.com) as well as used [Glitch](https://glitch.com/) for the api database. 
 
 ### Open-sourch used
